@@ -4,7 +4,7 @@ import ReactDOM from "react-dom";
 import './search.less'
 import girl from './images/girl.jpg'
 
-class Search extends React.Component{
+class Index extends React.Component{
 
     render() {
         return (
@@ -22,6 +22,6 @@ class Search extends React.Component{
 }
 
 ReactDOM.render(
-    <Search />,
+    <Index />,
     document.getElementById('root')
 )
