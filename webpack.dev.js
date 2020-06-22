@@ -4,8 +4,8 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 
 module.exports = {
     entry: {
-        app: './src/app.js',
-        search: './search/search.js',
+        index: './src/index/index.js',
+        search: './src/search/index.js',
     },
     output: {
         filename: '[name][chunkhash:8].js',

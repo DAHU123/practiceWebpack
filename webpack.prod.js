@@ -4,11 +4,14 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const optimizeCssAssetsWebpackPlugin = require('optimize-css-assets-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const { CleanWebpackPlugin } = require('clean-webpack-plugin')
+const setMPA = () => {
+    const entry = {}
+}
 
 module.exports = {
     entry: {
-        app: './src/app.js',
-        search: './search/search.js',
+        index: './src/index/index.js',
+        search: './src/search/index.js',
     },
     output: {
         filename: '[name]_[chunkhash:8].js',
@@ -90,8 +93,8 @@ module.exports = {
             cssProcessor: require('cssnano'),
         }),
         new HtmlWebpackPlugin({
-            template: path.join(__dirname, 'search/search.html'),
-            filename: "search.html",
+            template: path.join(__dirname, 'search/index.html'),
+            filename: "index.html",
             chunks: ['search'],
             inject: true,
             minify: {
@@ -104,8 +107,8 @@ module.exports = {
             }
         }),
         new HtmlWebpackPlugin({
-            template: path.join(__dirname, 'src/app.html'),
-            filename: "app.html",
+            template: path.join(__dirname, 'src/index.html'),
+            filename: "index.html",
             chunks: ['app'],
             inject: true,
             minify: {
