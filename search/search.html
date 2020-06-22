@@ -1,0 +1,11 @@
+<!doctype html>
+<html lang="en">
+<head>
+    ${ require('raw-loader!./meta.html').default }
+    <title>search</title>
+    <script type="text/javascript">${ require('raw-loader!babel-loader!../node_modules/lib-flexible/flexible.js).default }</script>
+</head>
+<body>
+    <div id="root"></div>
+</body>
+</html>
